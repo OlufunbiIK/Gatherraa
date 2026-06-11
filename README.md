@@ -58,10 +58,10 @@ Gathera/
 
 ### Prerequisites
 
-- Node.js 20+
+- Node.js 20.0.0+
+- npm 10+
 - Rust 1.74+
 - Soroban CLI
-- npm or yarn
 
 ### Environment Setup
 
