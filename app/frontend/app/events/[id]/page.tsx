@@ -11,6 +11,7 @@ import RatingDisplay from '../../../components/reviews/rating-display';
 import ReviewList from '../../../components/reviews/review-list';
 import ReviewForm from '../../../components/reviews/review-form';
 import { useAuth } from '../../../hooks/useAuth';
+import AttendanceAnalyticsWidget from '../../../components/dashboard/AttendanceAnalyticsWidget';
 
 /** API may include aggregates not yet on the base `Event` type */
 type EventDetailPayload = Event & {
@@ -161,6 +162,11 @@ export default function EventDetailPage() {
             )}
           </div>
         </div>
+
+        {/* Organizer Attendance Analytics */}
+        {isOrganizer && (
+          <AttendanceAnalyticsWidget event={event as Event} />
+        )}
 
         {/* Rating Display */}
         {event.ratingSummary && (
